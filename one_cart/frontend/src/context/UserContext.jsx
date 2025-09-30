@@ -13,7 +13,7 @@ const UserProvider = ({ children }) => {
   // Fetch current user from the backend
   const getCurrentUser = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/use/current", {
+      const res = await axios.get("http://localhost:4000/api/user/current", {
         withCredentials: true,
       });
       console.log(res)

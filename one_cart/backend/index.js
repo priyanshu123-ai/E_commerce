@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import userRoutes from "./route/userRoute.js";
 import currentRoutes from "./route/currentUserRoute.js";
 import database from "./utils/database.js";
+import productRoutes from "./route/productRoutes.js";
 
 dotenv.config();
 
@@ -25,7 +26,7 @@ database();
 // Routes
 app.use("/api/user", userRoutes);
 app.use("/api/user", currentRoutes); // '/use' is intentional if that's what you meant
-
+app.use("/api/product",productRoutes)
 // Server start
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {

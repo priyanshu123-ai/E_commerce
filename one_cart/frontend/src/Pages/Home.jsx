@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import Hero from "../component/Hero";
 import Background from "../component/Background";
 import Nav from "../component/Nav";
+import Product from "./Product";
+import OurPolicy from "../component/OurPolicy";
+import NewsLetter from "../component/NewsLetter";
+import Footer from "../component/Footer";
 
 const Home = () => {
   const [heroCount,setHeroCount] = useState(0); 
@@ -28,7 +32,7 @@ useEffect(() => {
     <>
     <Nav />
   <div className="overflow-x-hidden relative top-[90px]">
-      <div className="w-screen h-[45vh] md:h-[60vh] lg:h-[100vh] bg-gradient-to-l from-[#141414] to-[#0c2025]">
+      <div className="w-screen h-[60vh] md:h-[90vh] lg:min-h-[100vh] bg-gradient-to-l from-[#141414] to-[#0c2025]">
        <Background heroCount={heroCount}/>
       <Hero heroCount = {heroCount}
       setHeroCount = {setHeroCount}
@@ -36,6 +40,10 @@ useEffect(() => {
       />
      
     </div>
+    <Product />
+    <OurPolicy />
+    <NewsLetter />
+    <Footer />
   </div>
   </>
   );
